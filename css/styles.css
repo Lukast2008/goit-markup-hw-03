@@ -8,9 +8,45 @@
   --back-color--: #f5f4fa;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 94px 0px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: var(--main-color--);
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+.header {
+  width: 1600px;
+  margin: 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: Solid;
+  border-bottom-color: #ececec;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  /* outline: 2px dashed #da6612; */
+}
+
+.posstion {
+  display: flex;
 }
 
 .logo {
@@ -21,6 +57,9 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  width: 145px;
 }
 
 /*header*/
@@ -32,11 +71,25 @@ body {
   color: var(--bleack-color--);
 }
 
+.nav-item {
+  display: flex;
+  margin-left: 93px;
+  width: 270px;
+}
+
+.nav-menu {
+  display: flex;
+  padding: 32px 0px;
+  width: 281px;
+  justify-content: space-between;
+}
+
 .nav-style {
   list-style: none;
 }
 
-.nav-text,.nav-text-sel {
+.nav-text,
+.nav-text-sel {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.172;
@@ -47,17 +100,22 @@ body {
   text-decoration: none;
 }
 
-.nav-text-sel{
-  color: var(--brand-color--)
+.nav-text-sel {
+  color: var(--brand-color--);
 }
 
-
+.contacts-item {
+  display: flex;
+  margin-left: 344px;
+  padding: 0;
+}
 
 .contacts-list {
   list-style: none;
+  padding: 32px 0px;
 }
 
-.contacts-text {
+.contacts-mail {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.172;
@@ -65,17 +123,41 @@ body {
   text-align: left;
   text-decoration: none;
   color: var(--description-color--);
+  width: 135px;
+}
+
+.contacts-fone {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.172;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-decoration: none;
+  color: var(--description-color--);
+  margin-left: 50px;
+  width: 122px;
 }
 
 .nav-text:hover,
 .nav-text:focus,
-.contacts-text:hover,
-.contacts-text:focus {
+.contacts-mail:hover,
+.contacts-mail:focus,
+.contacts-fone:hover,
+.contacts-fone:focus {
   color: var(--brand-color--);
 }
 
+/* MAIN content*/
+
 .hero {
   background-color: var(--backgrs-color--);
+  margin: 0 auto;
+  width: 1600px;
+  /* outline: 2px dashed #36f439; */
+}
+
+.posstion-hero {
+  padding: 200px 252px 200px;
 }
 
 .header-h1 {
@@ -85,7 +167,13 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--main-color--);
-  text-transform:uppercase;
+  text-transform: uppercase;
+  width: 696px;
+  margin-bottom: 30px;
+}
+
+.btn-pos {
+  display: flex;
 }
 
 .btn {
@@ -95,21 +183,43 @@ body {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  text-align: center;
-  
+  margin: 0 auto;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  padding: 10px 32px;
+  /* outline: 2px dashed #36f439; */
 }
 
-.btn,.filter-btn{
+.btn,
+.filter-btn {
   cursor: pointer;
 }
 
 /*Features*/
+
+.features {
+  width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 0px;
+  /* outline: 2px dashed #36f439; */
+}
+
 .text-features {
   visibility: hidden;
+  height: 0;
 }
 
 .features-list {
   list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  /* outline: 2px dashed #5236f4; */
+}
+
+.features-item {
+  width: 270px;
 }
 
 .features-header {
@@ -119,6 +229,8 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--header-color--);
+  margin-bottom: 10px;
+  /* outline: 2px dashed #5236f4; */
 }
 
 .features-disc {
@@ -129,6 +241,13 @@ body {
   text-align: left;
 }
 
+/* What do we do? */
+.what {
+  width: 1600px;
+  margin: 0 auto;
+  /* outline: 2px dashed #5236f4; */
+}
+
 .what-header {
   color: var(--header-color--);
   font-size: 36px;
@@ -136,14 +255,21 @@ body {
   line-height: 1.1719;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .what-list {
+  padding: 0px;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0px;
 }
 
 .our-teams {
   background-color: var(--back-color--);
+  width: 1600px;
+  margin: 0 auto;
 }
 
 .teams-header {
@@ -153,10 +279,15 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--header-color--);
+  margin-bottom: 50px;
+  /* padding-top: 94px; */
 }
 
 .team-list {
   list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .person-name {
@@ -166,10 +297,15 @@ body {
   line-height: 1.171;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-top: 30px;
 }
 
 .list-item {
   width: 270px;
+  border-radius: 4px;
+  offset: 0px, 2px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .tech {
@@ -178,10 +314,15 @@ body {
   line-height: 1.187;
   letter-spacing: 0.03em;
   text-align: center;
+  margin: 10px 0px;
+  padding-bottom: 30px;
 }
 
 .foo {
   background-color: var(--backgrs-color--);
+  width: 1600px;
+  margin: 0 auto;
+  padding: 60px 0px;
 }
 
 .logo-infoo {
@@ -204,6 +345,10 @@ body {
 
 .link-addres {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 20px;
 }
 
 .addres-com {
@@ -213,6 +358,7 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   text-decoration: none;
+  width: 231px;
 }
 
 .contacts {
@@ -231,13 +377,28 @@ body {
   color: var(--brand-color--);
 }
 
+/* portfolio */
+
+.portfolio {
+  width: 1600px;
+  margin: 0 auto;
+}
+
 .filter-heading {
   visibility: hidden;
+  height: 0;
 }
 
 .filter-buttons,
 .project-items {
   list-style: none;
+  padding: 0px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 
 .filter-btn {
@@ -248,6 +409,10 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--header-color--);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 25px;
+  margin-left: 8px;
 }
 
 .filter-btn:hover,
@@ -256,8 +421,15 @@ body {
   color: var(--main-color--);
 }
 
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .project-item {
   width: 370px;
+  border: 1px solid #eeeeee;
 }
 
 .project-name {
@@ -267,6 +439,7 @@ body {
   letter-spacing: 0.06em;
   text-align: left;
   color: var(--header-color--);
+  margin-top: 20px;
 }
 
 .project-type {
@@ -275,4 +448,10 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--description-color--);
+  margin-top: 4px;
+  padding-bottom: 20px;
+}
+
+.project-position {
+  margin-bottom: 30px;
 }
