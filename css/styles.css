@@ -8,40 +8,43 @@
   --back-color--: #f5f4fa;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .section {
   padding: 94px 0px;
 }
 
+
 body {
   font-family: "Roboto", sans-serif;
-  background: var(--main-color--);
 }
 
 h1,
 h2,
 h3,
-ul,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .header {
-  width: 1600px;
   margin: 0 auto;
   border-bottom-width: 1px;
-  border-bottom-style: Solid;
+  border-bottom-style: solid;
   border-bottom-color: #ececec;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  width: 1200px;
+  padding: 0 15px;
+
   /* outline: 2px dashed #da6612; */
 }
 
@@ -74,13 +77,11 @@ p {
 .nav-item {
   display: flex;
   margin-left: 93px;
-  width: 270px;
 }
 
 .nav-menu {
   display: flex;
-  padding: 32px 0px;
-  width: 281px;
+  gap: 50px;
   justify-content: space-between;
 }
 
@@ -90,12 +91,12 @@ p {
 
 .nav-text,
 .nav-text-sel {
+  display: block;
+  padding: 32px 0px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.172;
   letter-spacing: 0.02em;
-  text-align: left;
-  text-decoration: none;
   color: var(--bleack-color--);
   text-decoration: none;
 }
@@ -106,8 +107,8 @@ p {
 
 .contacts-item {
   display: flex;
-  margin-left: 344px;
-  padding: 0;
+  margin-left: auto;
+  gap: 50px;
 }
 
 .contacts-list {
@@ -123,7 +124,7 @@ p {
   text-align: left;
   text-decoration: none;
   color: var(--description-color--);
-  width: 135px;
+  
 }
 
 .contacts-fone {
@@ -134,8 +135,8 @@ p {
   text-align: left;
   text-decoration: none;
   color: var(--description-color--);
-  margin-left: 50px;
-  width: 122px;
+  
+  
 }
 
 .nav-text:hover,
@@ -150,14 +151,12 @@ p {
 /* MAIN content*/
 
 .hero {
+  padding: 200px 0;
   background-color: var(--backgrs-color--);
-  margin: 0 auto;
-  width: 1600px;
-  /* outline: 2px dashed #36f439; */
 }
 
 .posstion-hero {
-  padding: 200px 252px 200px;
+  
 }
 
 .header-h1 {
@@ -169,6 +168,7 @@ p {
   color: var(--main-color--);
   text-transform: uppercase;
   width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -199,10 +199,7 @@ p {
 /*Features*/
 
 .features {
-  width: 1600px;
-  margin: 0 auto;
   padding-bottom: 0px;
-  /* outline: 2px dashed #36f439; */
 }
 
 .text-features {
@@ -243,7 +240,6 @@ p {
 
 /* What do we do? */
 .what {
-  width: 1600px;
   margin: 0 auto;
   /* outline: 2px dashed #5236f4; */
 }
@@ -268,7 +264,6 @@ p {
 
 .our-teams {
   background-color: var(--back-color--);
-  width: 1600px;
   margin: 0 auto;
 }
 
@@ -303,7 +298,7 @@ p {
 .list-item {
   width: 270px;
   border-radius: 4px;
-  offset: 0px, 2px;
+  background: #ffffff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
@@ -318,9 +313,8 @@ p {
   padding-bottom: 30px;
 }
 
-.foo {
+.footer {
   background-color: var(--backgrs-color--);
-  width: 1600px;
   margin: 0 auto;
   padding: 60px 0px;
 }
@@ -380,7 +374,6 @@ p {
 /* portfolio */
 
 .portfolio {
-  width: 1600px;
   margin: 0 auto;
 }
 
@@ -398,7 +391,7 @@ p {
 .filter-buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-btn {
@@ -424,7 +417,7 @@ p {
 .project-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .project-item {
@@ -434,13 +427,13 @@ p {
 
 .img{
   display: block;
-  max-width: 100%;
 }
 
 .project-border{
   
   border: 1px solid #eeeeee;
-  
+  border-top: none;
+  padding: 20px 24px;
 }
 
 .project-name {
@@ -450,7 +443,7 @@ p {
   letter-spacing: 0.06em;
   text-align: left;
   color: var(--header-color--);
-  margin-top: 20px;
+  
 }
 
 .project-type {
